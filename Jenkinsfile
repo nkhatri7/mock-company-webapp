@@ -8,12 +8,14 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Creating Build'
+        sh './gradlew assemble'
       }
     }
 
     stage('Test') {
       steps {
         echo 'Running Unit Tests'
+        sh './gradlew test'
       }
     }
   }
