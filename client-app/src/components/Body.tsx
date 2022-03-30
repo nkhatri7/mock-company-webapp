@@ -72,11 +72,11 @@ class Body extends React.Component<BodyProps, BodyState> {
   }
 
   async componentDidMount() {
-    this.handleChangePage = this.handleChangePage.bind(this);
+    this.handlePageChange = this.handlePageChange.bind(this);
     this.handleChangeRowsPerPage = this.handleChangeRowsPerPage.bind(this);
   }
 
-  handleChangePage(e: any, newPage: any) {
+  handlePageChange(e: any, newPage: any) {
     this.setState({ page: newPage });
   };
 
@@ -124,7 +124,7 @@ class Body extends React.Component<BodyProps, BodyState> {
             count={products.length}
             rowsPerPage={rowsPerPage}
             page={page}
-            onChangePage={this.handleChangePage}
+            onPageChange={this.handlePageChange}
             onChangeRowsPerPage={this.handleChangeRowsPerPage}
             />
         </Paper>
